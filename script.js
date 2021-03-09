@@ -1,3 +1,7 @@
+let nightmode = document.getElementById('nightmode');
+let BGColor = document.querySelector('body');
+
+
 function changeHeader(){
 
     let header = document.querySelector('h1');
@@ -9,7 +13,23 @@ function changeHeader(){
     }
 
     
-}
+};
 
 
+function changeBackground() {
+    
+    
+    if (BGColor.style.background !== "black"){
+        BGColor.style.background = 'black';
 
+
+    } else {
+        BGColor.style.background = 'rgb(247, 247, 247)';
+
+
+    }   
+
+    }
+
+
+nightmode.addEventListener('click', changeBackground);
